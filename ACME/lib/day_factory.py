@@ -1,5 +1,5 @@
 # pylint: disable=too-few-public-methods
-"Abstract Furniture Factory"
+"Abstract Day Factory"
 from day import Day
 from interface_day_factory import IDayFactory
 from weekday_director import WeekdayDirector
@@ -7,7 +7,7 @@ from weekend_director import WeekendDirector
 
 
 class DayFactory(IDayFactory):
-    "The Abstract Factory Concrete Class"
+    "The Abstract Factory Day Class"
     @staticmethod
     def get_day(day: str, config: dict, hours: dict) -> Day:
         "Static get_factory method"

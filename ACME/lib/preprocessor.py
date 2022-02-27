@@ -9,7 +9,7 @@ class Preprocessor(IPresprocessor):
 
     @classmethod
     def load_data(cls, data_queue):
-        "Method use for loading"
+        "Method use for loading data"
         cls.data = data_queue
         return cls
 

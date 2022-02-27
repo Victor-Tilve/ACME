@@ -1,10 +1,10 @@
 # pylint: disable=attribute-defined-outside-init
 
-"The Product"
+"The Product: Day"
 
 
 class Day():  # pylint: disable=too-few-public-methods
-    "The Product"
+    "The Product: in this case, a day"
 
     def __init__(self, hour_seccion_1=None, hour_seccion_2=None, hour_seccion_3=None):
         # true, false
@@ -14,15 +14,14 @@ class Day():  # pylint: disable=too-few-public-methods
         # true, false
         self.hour_seccion_3 = hour_seccion_3
         self.weekday: bool = None
-        self.day_hour_section_1_price: float = 0  # NOTE: convertir a decimal
-        self.day_hour_section_2_price: float = 0  # NOTE: convertir a decimal
-        self.day_hour_section_3_price: float = 0  # NOTE: convertir a decimal
+        self.day_hour_section_1_price: float = 0  
+        self.day_hour_section_2_price: float = 0  
+        self.day_hour_section_3_price: float = 0  
         self.prices = dict()
 
-    def process_days(self) -> int:
-        "Returns a string describing the construction"
-        # COMEBACK: condicional para cuando es la primera hora del día, que se trabajan 59 mins
-
+    def process_days(self) -> float:
+        "Return a float value with the total payment for an specific employee"
+        
         self.prices["price_hour_seccion_1"] = float(
             self.hour_seccion_1 * self.day_hour_section_1_price)/60
         self.prices["price_hour_seccion_2"] = float(

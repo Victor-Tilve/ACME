@@ -11,17 +11,17 @@ class DayBuilder(IDayBuilder):
         self.day = Day()
 
     def set_hour_seccion_1(self, hour_seccion_1: int)-> Self:
-        "Hago la multiplicacion necesarioa para saber cualto dinero es"
+        "set the hour for an specific section"
         self.day.hour_seccion_1 = hour_seccion_1
         return self
 
     def set_hour_seccion_2(self, hour_seccion_2: int)-> Self:
-        "Hago la multiplicacion necesarioa para saber cualto dinero es"
+        "set the hour for an specific section"
         self.day.hour_seccion_2 = hour_seccion_2
         return self
 
     def set_hour_seccion_3(self, hour_seccion_3: int) -> Self:  # pylint: disable=undefined-variable
-        "Hago la multiplicacion necesarioa para saber cualto dinero es"
+        "set the hour for an specific section"
         self.day.hour_seccion_3 = hour_seccion_3
         return self
 
@@ -35,6 +35,6 @@ class DayBuilder(IDayBuilder):
         return self.day.weekday
 
     def get_result(self, config: dict)-> Day:
-        "Hago la multiplicacion necesarioa para saber cualto dinero es"
+        "get all the information that was configure in day object"
         self.day.set_prices(config, self.get_type_of_day())
         return self.day
