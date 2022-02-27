@@ -31,7 +31,7 @@ def main(argv):
     input_sentences = list()
 
     if len(argv) != 1:
-        print("Mensaje de error")
+        print("Something went wrong")
         sys.exit()
     else:
         path = argv[0]
