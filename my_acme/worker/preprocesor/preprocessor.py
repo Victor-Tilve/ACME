@@ -26,27 +26,24 @@ class Preprocessor(IPresprocessor):
 
         worked_day = cls._worked_day()
         if worked_day is None:
-            print("not follow the frame structure")
             return False
-        
+
         if not cls._validate_day_names(worked_day):
-            print("not Follow no-repetition day name rule")
             return False
-        
+
         if not cls._validate_hour_structure(worked_day):
-            print("not Follow the hour structure")
             return False
-        
+
         return True
 
     @classmethod
     def _worked_day(cls) -> list:
         "Return a list with all day properties extracted from data"
-    
+
         colon = ":"
         comma = ","
         equal = "="
-
+        equal_index = 0
         # Validate if _index_finder return a empty list
         if cls._index_finder(cls.data, colon):
             colon_index = cls._index_finder(cls.data, colon)
@@ -71,16 +68,18 @@ class Preprocessor(IPresprocessor):
         else:
             return None
 
-
         # Day by day extraction
         worked_day = []
-        day_1 = cls.data[equal_index+1:comma_index[0]] #pylint: disable=unsubscriptable-object
+        day_1 = cls.data[equal_index+1:comma_index[0]
+                         ]  # pylint: disable=unsubscriptable-object
         worked_day.append(day_1)
 
         for day in range(1, num_days-1):
-            worked_day.append(cls.data[comma_index[day-1]+1:comma_index[day]])#pylint: disable=unsubscriptable-object
+            worked_day.append(
+                cls.data[comma_index[day-1]+1:comma_index[day]])  # pylint: disable=unsubscriptable-object
 
-        day_last = cls.data[comma_index[-1]+1:] #pylint: disable=unsubscriptable-object
+        day_last = cls.data[comma_index[-1] +
+                            1:]  # pylint: disable=unsubscriptable-object
         worked_day.append(day_last)
 
         return worked_day
