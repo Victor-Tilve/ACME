@@ -37,6 +37,13 @@ To install it, all you have to do is:
 > python install pipenv
 when the installation is ready, we run the virtual environment and then run the application.
 #### run the virtual environment
+> pipenv install
 > pipenv shell
 #### run the application
+Locating us in the ACME folder, at the same level as the virtual environment and input.txt files.
+<p align="center">
+  <img src="images/layout_project.png">
+  <br/>
+</p>
+
 > python ACME/lib/acme.py input.txt
