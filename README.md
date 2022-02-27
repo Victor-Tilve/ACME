@@ -10,7 +10,7 @@ programming exercise to evaluate my skills in Python
 
 
 <p align="center">
-  <img src="images/MLClass.png">
+  <img src="images/UMLClass.png">
   <br/>
 </p>
 
