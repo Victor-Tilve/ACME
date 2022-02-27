@@ -41,8 +41,8 @@ class Preprocessor(IPresprocessor):
 
     @classmethod
     def _worked_day(cls) -> list:
-        "hacer el docstring"
-        # COMEBACK
+        "Return a list with all day properties extracted from data"
+    
         colon = ":"
         comma = ","
         equal = "="
@@ -144,7 +144,6 @@ class Preprocessor(IPresprocessor):
             start_min = day_schedule[5:7]
             end_hour = day_schedule[8:10]
             end_min = day_schedule[11:]
-
             # Must have 11 characters
             if len(hour) != 11:
                 return False
@@ -154,7 +153,7 @@ class Preprocessor(IPresprocessor):
                 return False
             elif not start_hour.isdigit() or not start_min.isdigit() or not end_hour.isdigit() or not end_min.isdigit():
                 return False
-            return True
+        return True
 
 
 if __name__ == "__main__":
@@ -162,5 +161,6 @@ if __name__ == "__main__":
         'RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00',
         'ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00'
     ]
-    trama = TRAMAS.pop(0)
+    trama = TRAMAS.pop(1)
+    print(trama)
     print(Preprocessor.load_data(trama).validate_data())
