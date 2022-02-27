@@ -4,13 +4,13 @@ programming exercise to evaluate my skills in Python
 
 
 <p align="center">
-  <img src="Components.png">
+  <img src="images/Components.png">
   <br/>
 </p>
 
 
 <p align="center">
-  <img src="MLClass.png">
+  <img src="images/MLClass.png">
   <br/>
 </p>
 
