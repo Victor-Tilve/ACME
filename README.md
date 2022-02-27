@@ -40,7 +40,9 @@ We have a client application, which in this case would be the acme.py file, whic
 To avoid any kind of conflict with the python packages installed on the host, I created a virtual environment where I installed the dependencies I needed. In this particular case I used pipenv.
 
 To install it, all you have to do is:
+
 > python install pipenv
+ 
 when the installation is ready, we run the virtual environment and then run the application.
 #### Run the virtual environment
 
@@ -57,7 +59,7 @@ Locating us in the ACME folder, at the same level as the virtual environment and
 
 command:
 
-> python ACME/lib/acme.py input.txt
+> python my_acme/main.py input.txt
 
 <p align="center">
   <img src="images/application.png">
