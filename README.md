@@ -57,7 +57,7 @@ Locating us in the ACME folder, at the same level as the virtual environment and
 
 command:
 
-> python ACME/lib/acme.py input.txt
+> python my_acme/main.py input.txt
 
 <p align="center">
   <img src="images/application.png">
