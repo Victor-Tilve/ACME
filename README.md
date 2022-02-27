@@ -4,14 +4,18 @@ programming exercise to evaluate my skills in Python
 
 # Components
 The solution was proposed as shown in the following image:
+
 <p align="center">
   <img src="images/Components.png">
   <br/>
 </p>
+
 We have a main module called ACME that will be the one that calls the rest of the actors involved in the solution. Internally we have two closely related modules, the first in charge of reading the information stored in the text file, once stored in a list, we proceed to interpret the information in the next module. 
 The Worker module is divided into two stages, preprocessor and processor. The first sub-stage is in charge of validating the data that is being received, making sure that it maintains the correct structure, that the characters that compose it are the ideal ones and are in the corresponding position. An example data would be:
+
 > SALO=TU10:00-12:00,TH01:00-03:00,SA12:00-18:00,SU15:00-21:00
-Likewise, it is important to mention that the first two letters of each field separated by commas correspond to the first two letters of the respective day of the week:
+
+ikewise, it is important to mention that the first two letters of each field separated by commas correspond to the first two letters of the respective day of the week:
 
 * MO: Monday
 * TU: Tuesday
@@ -39,13 +43,18 @@ To install it, all you have to do is:
 > python install pipenv
 when the installation is ready, we run the virtual environment and then run the application.
 #### Run the virtual environment
+
 > pipenv install
 > pipenv shell
+
 #### Run the application
 Locating us in the ACME folder, at the same level as the virtual environment and input.txt files.
+
 <p align="center">
   <img src="images/layout_project.png">
   <br/>
 </p>
+
 command:
+
 > python ACME/lib/acme.py input.txt
