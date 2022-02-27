@@ -14,12 +14,13 @@ class Processor(IProcessor):
     section_times = dict()
     config = dict()
     employe_name = ""
+
     @classmethod
-    def load_data(cls, data_queue, config: dict):
+    def load_data(cls, data, config: dict):
         "Method use for loading"
 
         # COMEBACK: How i implement de block queue system
-        cls.data = data_queue
+        cls.data = data
 
         # NOTE: I asume weekday and weekend always will have identical time sections
         cls.section_times["HOUR_SECTION_1"] = config["WEEKDAY"]["HOUR_SECTION_1"][0]
@@ -39,7 +40,6 @@ class Processor(IProcessor):
         worked_days = cls._worked_days()
         created_days = cls._create_day(worked_days)
         return created_days
-       
 
     @classmethod
     def _worked_days(cls) -> list:
@@ -130,13 +130,11 @@ class Processor(IProcessor):
         seccions["HOUR_SECTION_3"] = int(section_times["HOUR_SECTION_3"][0:2]), int(section_times["HOUR_SECTION_3"][3:5]), int(24 if int(
             section_times["HOUR_SECTION_3"][6:8]) == 0 else int(section_times["HOUR_SECTION_3"][6:8])), int(section_times["HOUR_SECTION_3"][9:])
 
-
         # values to process
-        start_hour = int(hours[0:2]) 
+        start_hour = int(hours[0:2])
         start_min = int(hours[3:5])
         end_hour = int(hours[6:8])
         end_min = int(hours[9:])
-         
 
         _worked_mins = dict()
         # calculate Secction 1 <>
@@ -182,6 +180,7 @@ class Processor(IProcessor):
     def get_employee_name(cls):
         return cls.employe_name
 
+
 if __name__ == "__main__":
     CONFIG = {
         "WEEKDAY": {
@@ -200,4 +199,4 @@ if __name__ == "__main__":
         'ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00',
         'RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00',
     ]
-    Processor.load_data(TRAMAS, CONFIG).process_data()
+    Processor.load_data(TRAMAS[0], CONFIG).process_data()

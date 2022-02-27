@@ -8,7 +8,7 @@ class IProcessor(metaclass=ABCMeta):
 
     @staticmethod
     @abstractmethod
-    def load_data(data_queue:list,config:dict):
+    def load_data(data:list,config:dict):
         "The Abstract Processor Interface method"
 
     # @staticmethod
