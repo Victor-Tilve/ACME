@@ -1,9 +1,9 @@
 # pylint: disable=too-few-public-methods
 "Abstract Day Factory"
-from day import Day
-from interface_day_factory import IDayFactory
-from weekday_director import WeekdayDirector
-from weekend_director import WeekendDirector
+from ..builder.day import Day
+from .interface_day_factory import IDayFactory
+from ..builder.weekday_director import WeekdayDirector
+from ..builder.weekend_director import WeekendDirector
 
 
 class DayFactory(IDayFactory):

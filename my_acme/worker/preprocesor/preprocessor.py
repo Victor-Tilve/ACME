@@ -1,5 +1,5 @@
 "The preprocessor class"
-from interface_preprocesor import IPresprocessor
+from .interface_preprocesor import IPresprocessor
 
 
 class Preprocessor(IPresprocessor):

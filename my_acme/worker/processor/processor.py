@@ -1,6 +1,6 @@
 "The preprocessor class"
-from interface_processor import IProcessor
-from day_factory import DayFactory
+from .interface_processor import IProcessor
+from ..factory.day_factory import DayFactory
 
 
 class Processor(IProcessor):

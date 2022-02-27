@@ -1,7 +1,7 @@
 "The Builder Class"
 from typing_extensions import Self
-from interface_day_builder import IDayBuilder
-from day import Day
+from .interface_day_builder import IDayBuilder
+from .day import Day
 
 
 class DayBuilder(IDayBuilder):

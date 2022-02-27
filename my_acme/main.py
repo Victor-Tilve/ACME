@@ -1,9 +1,9 @@
 "Main script"
 import sys
-from preprocessor import Preprocessor
-from processor import Processor
-from employee import Employee
 
+from worker.preprocesor.preprocessor import Preprocessor
+from worker.processor.processor import Processor
+from employee.employee import Employee
 CONFIG = {
         "WEEKDAY": {
             "HOUR_SECTION_1": ("00:01-09:00", 25),

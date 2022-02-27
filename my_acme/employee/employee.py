@@ -1,7 +1,7 @@
 "The Employee class"
 
-from interface_employee import IEmployee
-from day import Day
+from worker.builder.day import Day
+from .interface_employee import IEmployee
 
 
 class Employee(IEmployee):
