@@ -1,6 +1,5 @@
 # ACME
-ioet Position: Python Developer - Coding exercise
-programming exercise to evaluate my skills in Python
+* Design patterns with python
 
 # Components
 The solution was proposed as shown in the following image:
